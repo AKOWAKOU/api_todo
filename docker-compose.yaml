@@ -1,5 +1,4 @@
 version: '3.8'
-
 services:
   mongo:
     image: mongo:8.0
@@ -12,7 +11,6 @@ services:
       - api_network
     environment:
       ME_CONFIG_MONGODB_URL: mongodb://localhost:27017/ 
-
   flask_app:
     image: api_todo:1.8
     build: .
@@ -26,7 +24,6 @@ services:
       MONGO_URI: mongodb://mongo:27017/todo  
     networks:
       - api_network
-
 networks:
   api_network:
     driver: bridge

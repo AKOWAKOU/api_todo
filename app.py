@@ -124,7 +124,11 @@ def delete_task(task_id):
 #Récupérer les tâches d'un utilisateur a partir de son id
 @app.route('/tasks/user/<user_id>', methods=['GET'])
 def get_user_tasks(user_id):
-    tasks = db.get_tasks_by_user(user_id)  
+    tasks = db.get_tasks_by_user(user_id) 
+    if not tasks:
+        return jsonify({
+            "msg":"Aucune tâche assignée à cet utilisateur"
+        }) ,404
     for task in tasks:
         task['_id'] = str(task['_id'])
         task['assigned_to'] = str(task['assigned_to'])
