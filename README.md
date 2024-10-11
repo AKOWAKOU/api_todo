@@ -2,12 +2,6 @@
 
 Cette API permet de gérer des tâches avec des utilisateurs assignés, des statuts et des dates d'échéance.
 
-## Configuration
-
-Assurez-vous d'avoir un fichier `.env` avec les configurations suivantes 
-
-    MONGO_URI=mongodb://<votre_mongodb_uri>
-
 
 ## Installation
 
