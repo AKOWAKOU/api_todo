@@ -20,7 +20,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 pip install --upgrade pip
-docker compose up
+docker compose up --build
 
 ## Endpoints
 1. Créer une Tâche
