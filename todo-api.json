@@ -56,7 +56,70 @@
 				},
 				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Get data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/tasks/user/6703d20f195e98c664964034",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"tasks",
+								"user",
+								"6703d20f195e98c664964034"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.4 Python/3.8.17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 10:42:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6708cbac58d203ac2fd07496\",\n        \"assigned_to\": \"6703d20f195e98c664964034\",\n        \"description\": \"WEKLEY\",\n        \"due_date\": \"Fri, 11 Oct 2024 00:00:00 GMT\",\n        \"status\": \"terminé\",\n        \"title\": \"CUSTOMER\"\n    }\n]"
+				}
+			]
 		},
 		{
 			"name": "Post data",
@@ -100,7 +163,62 @@
 				},
 				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Post data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"CUSTOMER\",\n  \"description\": \"WEKLEY\",\n  \"status\": \"terminé\",\n  \"due_date\": \"2024-10-11\",\n  \"assigned_to\":\"6703d20f195e98c664964034\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"tasks"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.4 Python/3.8.17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 10:48:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"task suceffull\",\n    \"task_id\": \"6709027c6769d70da9e57e6e\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Update data",
@@ -145,7 +263,63 @@
 				},
 				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Update data",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Le Codage intensif\",\n    \"description\": \"une application progaming interface permet la communication entre le client et serveur\",\n    \"assigned_to\": \"6703d20f195e98c664964034\",\n    \"status\": \"en cours\",\n    \"due_date\": \"2024-12-5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/tasks/6703d24f017a826a0aab2f5f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"tasks",
+								"6703d24f017a826a0aab2f5f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.4 Python/3.8.17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 10:48:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "57"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"msg\": \"Mise à jour de la tâche réussie\"\n}"
+				}
+			]
 		},
 		{
 			"name": "Delete data",
@@ -190,7 +364,63 @@
 				},
 				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Delete data",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/tasks/67001e809fc70a6a3b5c63a8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"tasks",
+								"67001e809fc70a6a3b5c63a8"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.4 Python/3.8.17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 10:48:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Tâche non trouvée\"\n}"
+				}
+			]
 		},
 		{
 			"name": "PATCH data",
@@ -231,7 +461,70 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "PATCH data",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"status\": \"en cours\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5002/tasks/67005d61f17d15f7ef9ddc17/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"tasks",
+								"67005d61f17d15f7ef9ddc17",
+								"status"
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.0.4 Python/3.8.17"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 11 Oct 2024 10:48:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Task not found\"\n}"
+				}
+			]
 		}
 	],
 	"event": [
