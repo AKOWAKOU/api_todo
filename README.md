@@ -19,7 +19,8 @@ cd api_todo
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-flask run -p <numero_port> (default= 5000)
+pip install --upgrade pip
+docker compose up
 
 ## Endpoints
 1. Créer une Tâche
