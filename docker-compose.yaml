@@ -12,7 +12,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_URL: mongodb://localhost:27017/ 
   flask_app:
-    image: api_todo:1.8
+    image: api_todo:1.9
     build: .
     container_name: api_todo
     ports:

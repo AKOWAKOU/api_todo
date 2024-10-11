@@ -2,6 +2,5 @@ __pycache__
 venv
 .env
 api.log
-api.json
 data
 app

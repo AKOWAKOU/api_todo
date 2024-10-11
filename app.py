@@ -17,7 +17,7 @@ app = Flask(__name__)
 db = Database()    #Instancie la connexion à la base de données à l'aide de la classe Database
 VALID_STATUSES = ["à faire", "en cours", "terminé"] # Définit les statuts valides pour une tâche dans une liste
 
-# endpoint de cration d'une tache
+# endpoint de création d'une tache
 @app.route('/tasks', methods=['POST'])
 def create_task():
     data = request.get_json() #recuperation des données json envoyé avec le requete
