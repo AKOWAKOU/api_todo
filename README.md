@@ -17,33 +17,29 @@ pip install --upgrade pip
 docker compose up --build
 
 ## Endpoints
+
 1. Créer une Tâche
-URL : /tasks
+URL : http://localhost:5002/tasks
 Méthode : POST
 Description : Crée une nouvelle tâche.
 
 2. Mettre à Jour une Tâche
-URL : /tasks/<task_id>
+URL :http://localhost:5002/tasks/<task_id>
 Méthode : PUT
 Description : Met à jour une tâche existante.
 
 3. Supprimer une Tâche
-URL : /tasks/<task_id>
+URL : http://localhost:5002/tasks/<task_id>
 Méthode : DELETE
 Description : Supprime une tâche existante.
 
 4. Récupérer les Tâches d'un Utilisateur
-URL : /tasks/user/<user_id>
+
+URL: http://localhost:5002/tasks/user/<user_id>
 Méthode : GET
 Description : Récupère toutes les tâches assignées à un utilisateur spécifique.
 
 5. Mettre à Jour le Statut d'une Tâche
-URL : /tasks/<task_id>/status
+URL : http://localhost:5002/tasks/<task_id>/status
 Méthode : PATCH
 Description : Met à jour uniquement le statut d'une tâche.
-
-
-
-
-## Notes 
-    fichier de test api.jon pour les reponses des requetes 
