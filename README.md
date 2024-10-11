@@ -8,7 +8,7 @@ Cette API permet de gérer des tâches avec des utilisateurs assignés, des stat
 1. Cloner le projet :
 
 ```bash
-git clone git@github.com:djiawou/api_todo.git
+git clone git@github.com:AKOWAKOU/api_todo.git
 cd api_todo
 python3 -m venv venv
 source venv/bin/activate
